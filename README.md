@@ -7,9 +7,6 @@ Booking KHLUG는 KHLUG 동아리방을 위한 초경량, 고효율 도서 대출
 
 전체 시스템은 크게 세 가지 파트로 구성됩니다.
 
-[Scanner (HCAM01S)] --(USB)--> [Kiosk (RPi/Alpine)] --(HTTP/API)--> [Server]
-(Rust + Svelte)
-
 1. Scanner: HCAM01S 카메라를 이용해 이미지를 캡처하고 바코드/QR 정보를 파싱해 전송합니다.
 2. Kiosk: 라즈베리 파이에서 실행됩니다. 스캐너를 조작하고 웹 기술(HTML/CSS/JS)기반 UI를 통해 사용자와 상호작용합니다.
 3. Server: 도서 정보 관리, 대출 및 반납 인증(QR 토큰 검증), 외부 API 연동을 담당합니다.

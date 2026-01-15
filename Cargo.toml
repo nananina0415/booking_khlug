@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "scanner",
+    "kiosk",
+    "common",
+]
+resolver = "2"

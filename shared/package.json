@@ -1,0 +1,10 @@
+{
+  "name": "@booking-khlug/shared",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "components/index.ts",
+  "exports": {
+    "./components": "./components/index.ts",
+    "./components/*": "./components/*"
+  }
+}

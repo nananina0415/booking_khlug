@@ -36,4 +36,5 @@ Why? 기존에는 Arduino Uno + OV7670를 사용하려 했지만 충분한 FPS�
 
 - /kiosk: 라즈베리 파이용 Rust/Svelte 애플리케이션
 - /scanner: HCAM01S을 스캐너로 추상화하는 러스트 라이브러리
-- /server: 백엔드 API 서버
+- /server: 백엔드 API 서버 (Flask + SQLite)
+- /shared: 프론트엔드 공유 Svelte 컴포넌트 (키오스크/웹 공용)

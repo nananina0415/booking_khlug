@@ -24,10 +24,12 @@
 
 1. Alpine Linux 설치: Raspberry Pi용 Alpine Linux (armhf) 이미지를 설치합니다.
 2. 필수 패키지 설치:
+   ```
    apk update
    apk add cage cog mesa-dri-gallium udev ttf-dejavu font-noto-cjk libv4l
-3. 권한 설정: 사용자를 video, input 그룹에 추가해야 웹캠 접근이 가능합니다.
-4. 자동 실행 설정: /etc/local.d/ 스크립트를 통해 부팅 시 cage cog http://localhost:8080 명령이 실행되도록 설정합니다.
+   ```
+4. 권한 설정: 사용자를 video, input 그룹에 추가해야 웹캠 접근이 가능합니다.
+5. 자동 실행 설정: /etc/local.d/ 스크립트를 통해 부팅 시 cage cog http://localhost:8080 명령이 실행되도록 설정합니다.
 
 ## 빌드 및 배포 (Build & Deploy)
 

@@ -33,9 +33,11 @@
 
 ### 1. Frontend (Svelte)
 
+공유 컴포넌트는 /shared 폴더에서 가져옵니다.
+
 ```
 cd frontend
-npm install
+npm install   # @booking-khlug/shared 의존성 포함
 npm run build
 # 결과물인 'dist' 폴더는 Rust Poem 서버의 정적 파일 경로로 설정됩니다.
 ```

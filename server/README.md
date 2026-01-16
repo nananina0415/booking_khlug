@@ -84,11 +84,46 @@ interface wlan0
 - Request Body:
   ```
   {
-  "qr_token": "user_auth_token", // 반납 시에도 본인 확인이 필요한 경우
-  "device_id": "kiosk_01"
+  "qr_token": "user_auth_token"
   }
   ```
 - Logic: 해당 책을 반납 처리합니다.
+
+### 5. 도서 추가
+
+- PUT /api/book/{isbn} - 도서 추가 (누구나, 키오스크에서 바코드 스캔 시)
+
+### 6. 사용자 대출 목록 조회
+
+- GET /api/user/{id}/borrows - 특정 사용자의 대출 기록 조회
+
+## 관리 페이지 (매니저 전용)
+
+관리 기능은 API가 아닌 웹 페이지로만 제공됩니다. 키오스크에는 로그인 기능이 없으므로 보안상 매니저 전용 기능은 웹에서만 접근 가능합니다.
+
+### 도서 관리
+
+- /manage/book/ - 도서 관리 페이지 (목록, 수정, 삭제)
+- /manage/book/{isbn}/edit - 도서 수정 페이지
+- /manage/book/{isbn}/delete - 도서 삭제 액션
+
+### 사용자 관리
+
+- /user/ - 사용자 관리 페이지 (목록, 추가, 삭제)
+- /user/add - 사용자 추가 액션
+- /user/delete/{id} - 사용자 삭제 액션
+
+## 프론트엔드
+
+server/frontend 폴더에 Svelte 기반 SPA가 있습니다.
+공유 컴포넌트는 /shared 폴더에서 가져옵니다.
+
+```bash
+cd frontend
+npm install
+npm run dev    # 개발 서버
+npm run build  # 프로덕션 빌드
+```
 
 ## 외부 API 설정
 

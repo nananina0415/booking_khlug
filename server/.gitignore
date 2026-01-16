@@ -1,0 +1,12 @@
+# 빌드 타임 생성 파일
+generated/
+data/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# 환경 변수
+.env

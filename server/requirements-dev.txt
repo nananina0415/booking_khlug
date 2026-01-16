@@ -1,0 +1,3 @@
+# 빌드 타임 의존성 (코드 생성용)
+openapi-generator-cli
+datamodel-code-generator
